@@ -124,7 +124,7 @@ class ZeebeClient(object):
     async def publish_message(
         self,
         name: str,
-        correlation_key: str,
+        correlation_key: str = None,
         variables: Optional[Dict] = None,
         time_to_live_in_milliseconds: int = 60000,
         message_id: Optional[str] = None,
